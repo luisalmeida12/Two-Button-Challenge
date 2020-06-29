@@ -10,11 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var messageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+         messageLabel.text = ""
     }
 
-
+    @IBAction func messageButtonPressed(_ sender: Any) {
+        messageLabel.text = "You're Awesome!"
+        messageLabel.textColor = UIColor.blue
+        messageLabel.textAlignment = .left
+    }
+    
+    @IBAction func showAnotherMessagePressed(_ sender: Any) {
+        messageLabel.text = "You're Great!"
+        messageLabel.textColor = .systemRed
+        messageLabel.textAlignment = .right
+    }
 }
 
